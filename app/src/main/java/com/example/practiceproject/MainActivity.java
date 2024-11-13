@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.practiceproject.fragments.FragmentB;
+
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText passwordInput;
     Button btnLogin;
     private int[] listTextButtonID = {R.id.navToIntent2, R.id.navToBaListView, R.id.navToAdvListView,
-    R.id.navToAdvGridView};
+    R.id.navToAdvGridView, R.id.navToFragment};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.navToAdvGridView:
                 intent = new Intent(MainActivity.this, AdvancedGridView.class);
+                startActivity(intent);
+                break;
+            case R.id.navToFragment:
+                intent = new Intent(MainActivity.this, MyFragment.class);
                 startActivity(intent);
                 break;
         }
