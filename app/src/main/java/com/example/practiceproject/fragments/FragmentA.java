@@ -16,8 +16,11 @@ import com.example.practiceproject.MyFragment;
 import com.example.practiceproject.R;
 
 public class FragmentA extends Fragment {
+    // method 1
     Button btnCount;
     int count = 0;
+    // method 2
+    FragmentB.Counter counterB2;
 
     @Nullable
     @Override
@@ -29,8 +32,13 @@ public class FragmentA extends Fragment {
             @Override
             public void onClick(View view) {
                 count++;
-                MyFragment myFragmentScreen = (MyFragment) getActivity();
-                myFragmentScreen.increaseValue(count);
+                // method 1
+                // MyFragment myFragmentScreen = (MyFragment) getActivity();
+                // myFragmentScreen.increaseValue(count);
+
+                // method 2
+                counterB2 = (FragmentB.Counter) getActivity();
+                counterB2.incrementValue(count);
             }
         });
         return v;

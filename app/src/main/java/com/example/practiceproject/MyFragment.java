@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.practiceproject.fragments.FragmentB;
 
-public class MyFragment extends AppCompatActivity {
+public class MyFragment extends AppCompatActivity implements FragmentB.Counter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,19 @@ public class MyFragment extends AppCompatActivity {
         });
     }
 
-    public void increaseValue(int count) {
-        FragmentB fragmentB;
-        fragmentB = (FragmentB) getSupportFragmentManager().findFragmentById(R.id.fragmentB);
+    // method 1
+//    public void increaseValue(int count) {
+//        FragmentB fragmentB;
+//        fragmentB = (FragmentB) getSupportFragmentManager().findFragmentById(R.id.fragmentB);
+//        if (fragmentB != null) {
+//            fragmentB.setCount(count);
+//        }
+//    }
+
+    // method 2
+    @Override
+    public void incrementValue(int count) {
+        FragmentB fragmentB = (FragmentB) getSupportFragmentManager().findFragmentById(R.id.fragmentB);
         if (fragmentB != null) {
             fragmentB.setCount(count);
         }

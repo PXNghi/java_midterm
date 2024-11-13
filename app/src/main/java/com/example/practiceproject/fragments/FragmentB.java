@@ -25,4 +25,9 @@ public class FragmentB extends Fragment {
     public void setCount(int count) {
         counterTextB.setText("Count: " + count);
     }
+
+    // Method 2
+    public interface Counter {
+        public void incrementValue(int count);
+    }
 }
