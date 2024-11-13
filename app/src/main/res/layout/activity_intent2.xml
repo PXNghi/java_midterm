@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Intent2">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="30dp"
+        android:text="Intent 2" />
+
+    <Button
+        android:id="@+id/btnShowWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="16dp"
+        android:text="Show web" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="16dp"
+        android:text="Call" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="16dp"
+        android:text="Edit Contact" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="16dp"
+        android:text="View Contact" />
+
+    <Button
+        android:id="@+id/btnSendMess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        app:backgroundTint="@null"
+        android:layout_marginVertical="16dp"
+        android:text="Send Message" />
+</LinearLayout>
