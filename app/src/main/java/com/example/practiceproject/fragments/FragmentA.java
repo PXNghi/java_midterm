@@ -17,7 +17,6 @@ import com.example.practiceproject.R;
 
 public class FragmentA extends Fragment {
     Button btnCount;
-    TextView countText;
     int count = 0;
 
     @Nullable
