@@ -1,6 +1,7 @@
 package com.example.practiceproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -84,5 +85,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
+    }
+
+    private void saveAutoLogin(){
+        SharedPreferences preferences = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("username",usernameInput.getText().toString());
+        editor.putString("password",passwordInput.getText().toString());
+        editor.commit();
+    }
+
+    private boolean readAutoLogin(){
+        SharedPreferences preferences = getSharedPreferences("Login", MODE_PRIVATE);
+        String username = preferences.getString("username","");
+
+        if(username != null && !username.equals(""))
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        return false;
+    }
+
+    private void clearAutoLogin() {
+        SharedPreferences preferences = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    private void checkUserIsLogin() {
+        if (checkBox.isChecked() and readAutoLogin == true) {
+            // nav to show infor
+        }
     }
 }
