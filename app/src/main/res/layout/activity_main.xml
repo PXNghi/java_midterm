@@ -35,6 +35,8 @@
         android:layout_marginBottom="16dp"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/profile_selected_icon"
+        android:drawablePadding="8dp"
         android:hint="Please enter your username"
         android:text="" />
 
@@ -46,6 +48,8 @@
         android:inputType="textPassword"
         android:hint="Please enter your password"
         android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/edit_icon"
+        android:drawablePadding="8dp"
         android:layout_marginBottom="36dp"
         android:layout_marginHorizontal="16dp"
         android:text="" />
