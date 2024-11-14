@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/logo"/>
 
@@ -102,5 +102,14 @@
         android:layout_marginBottom="16dp"
         android:textSize="16dp"
         android:text="Demo Fragment" />
+
+    <TextView
+        android:id="@+id/navToBtnNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="16dp"
+        android:text="Demo Button Navigation" />
 
 </LinearLayout>

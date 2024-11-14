@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText passwordInput;
     Button btnLogin;
     private int[] listTextButtonID = {R.id.navToIntent2, R.id.navToBaListView, R.id.navToAdvListView,
-    R.id.navToAdvGridView, R.id.navToFragment};
+    R.id.navToAdvGridView, R.id.navToFragment, R.id.navToBtnNav};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.navToFragment:
                 intent = new Intent(MainActivity.this, MyFragment.class);
+                startActivity(intent);
+                break;
+            case R.id.navToBtnNav:
+                intent = new Intent(MainActivity.this, ButtonNavigation.class);
                 startActivity(intent);
                 break;
         }
